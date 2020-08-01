@@ -1,34 +1,25 @@
-# Core Java Examples
+# Generics And Collections
 
-#### Concepts
+#### Generics
 
-#### Java Serialization
+Why do we use Generics?
+1) Stronger type check at compiler time.
+2) Avoid casting during reading the values.
+3) We can implement a generic algorithm for sorting String/Double/Integers
 
-What is serialization
+Example
+1) Generic Class
+GenericClass.java
+2) Generic Methods
+AppGM.java
 
-To transfer object 1 from JVM1 to JVM2 then we do serialization.
+3) Bounded Type parameters
+Bounded type parameters allow you to invoke methods defined in the bounds 
+For Example 
+1) extends comparable -> we can use compare() method to compare items
 
- JVM1(Serialization)
- 
- Object code to bytecode and transfer object over network.
- 
- Why do we need serialization?
- Communication
- Persistence - store in file / db (state of the object)
- Deep copy ( Cloning process is made simple by serialization process)
- Caching - The time consumed in building the object is more than deserialize it.
- cross JVM Synchronization - different JVM
- 
- How do we serialize an object
- To serialize an object the parent class should implement either of the following interfaces:
- 
- java.io.Serializable
- java.io.Externalizable
- 
- 
-Disadvantages:
-Objects while deserialization becomes brittle
-Serialization results in the failure in the initialization of transient variables resulting in a variation to the standard Java Flow.
-Serialization is inefficent in terms of memory utilization
-Serialization does not offer any transition control mechanism per every SE.
-Serialization procedure fails to offer fine-grained control to access objects.
+2) a method that operates on numbers might only want to accept instances of Number or its subclasses.
+
+
+
+#### Collections
